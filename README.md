@@ -1,3 +1,4 @@
+Modefied from https://github.com/spro/char-rnn.pytorch
 
 Run `train.py` with the dataset filename to train and save the network:
 
