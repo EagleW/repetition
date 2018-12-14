@@ -8,8 +8,7 @@ import math
 import torch
 
 # Reading and un-unicode-encoding data
-
-all_characters = string.ascii_lowercase
+all_characters = 'ab#'
 n_characters = len(all_characters)
 
 def read_file(filename):
@@ -35,3 +34,15 @@ def time_since(since):
     m = math.floor(s / 60)
     s -= m * 60
     return '%dm %ds' % (m, s)
+# Reading and un-unicode-encoding data
+
+# all_characters = string.ascii_lowercase + '#' + '^'
+def get_total_data(f, num):
+    fo = open(f)
+    data = []
+    for line in fo:
+        line = line.strip()
+        seq = line.split(' ')[:num]
+        seq.extend('#')
+        data.append(seq)
+    return data
