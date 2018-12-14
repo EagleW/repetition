@@ -2,11 +2,11 @@
 Run `train.py` with the dataset filename to train and save the network:
 
 ```
-> python train.py shakespeare.txt
+> python train.py ab.txt
 
 Training for 2000 epochs...
 (... 10 minutes later ...)
-Saved as shakespeare.pt
+Saved as ab.pt
 ```
 After training the model will be saved as `[filename].pt`.
 
@@ -33,12 +33,6 @@ Run `generate.py` with the saved model from training, and a "priming string" to 
 
 ```
 > python generate.py norep7.pt --prime_str "a"
-
-Where, you, and if to our with his drid's
-Weasteria nobrand this by then.
-
-AUTENES:
-It his zersit at he
 ```
 
 ### Generation options
