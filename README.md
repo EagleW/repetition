@@ -35,7 +35,7 @@ Options:
 Run `generate.py` with the saved model from training, and a "priming string" to start the text with.
 
 ```
-> python generate.py shakespeare.pt --prime_str "Where"
+> python generate.py norep7.pt --prime_str "a"
 
 Where, you, and if to our with his drid's
 Weasteria nobrand this by then.
