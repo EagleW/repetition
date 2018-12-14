@@ -2,9 +2,6 @@
 Run `train.py` with the dataset filename to train and save the network:
 
 ```
-Run `train.py` with the dataset filename to train and save the network:
-
-```
 > python train.py shakespeare.txt
 
 Training for 2000 epochs...
