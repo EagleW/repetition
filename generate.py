@@ -44,19 +44,20 @@ if __name__ == '__main__':
 
 # Parse command line arguments
     argparser = argparse.ArgumentParser()
-    argparser.add_argument('-f', '--filename', type=str, default='norep7.pt')
+    argparser.add_argument('filename', type=str)
     argparser.add_argument('-p', '--prime_str', type=str, default='A')
     argparser.add_argument('-l', '--predict_len', type=int, default=100)
     argparser.add_argument('-t', '--temperature', type=float, default=0.8)
     argparser.add_argument('--cuda', action='store_true')
     args = argparser.parse_args()
 
+
     decoder = torch.load(args.filename)
     del args.filename
-    wf = open('sampler{}.txt'.format(args.l), 'w')
+    wf = open('sampler_ab{}.txt'.format(str(args.predict_len)), 'w')
     for c in string.ascii_lowercase:
         for i in range(100):
-            predicted = generate(decoder, prime_str=c, predict_len=args.l)
+            predicted = generate(decoder, prime_str=c, predict_len=args.predict_len)
             wf.write(predicted + '\n')
     # print(generate(decoder, **vars(args)))
 
